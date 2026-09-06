@@ -1,0 +1,888 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: #111;
+    padding: 20px;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: #ddd;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.pequeno {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("imagens/Luanda.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+button {
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #111;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* DESTINOS */
+
+.destinos {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.destinos h2,
+.sobre h2,
+.contacto h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #f4f4f4;
+}
+
+.sobre p {
+    font-size: 18px;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #111;
+    color: white;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+#formReserva {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#formReserva input,
+#formReserva select {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+#formReserva input:focus,
+#formReserva select:focus {
+    border-color: #111;
+}
+
+#formReserva button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+#resumo {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#resumo p {
+    margin: 8px 0;
+}
+
+#resumo strong {
+    font-size: 18px;
+}
+
+#erro {
+    color: #b00020;
+    font-size: 14px;
+    margin: 0;
+}
+
+.topo {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: hwb(0 5% 51%);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitulo {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 72px);
+
+    line-height: 1.05;
+
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 25px;
+
+    background: white;
+
+    color: black;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+.vantagens {
+    padding: 80px 7%;
+
+    background: #f7f7f7;
+
+    text-align: center;
+}
+
+.vantagens-container {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.titulo-secao p {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2 {
+    font-size: 38px;
+
+    margin: 0 0 15px;
+}
+
+.titulo-secao span {
+    display: block;
+
+    font-size: 17px;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.vantagens-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+.vantagem {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s ease;
+}
+
+.vantagem:hover {
+    transform: translateY(-5px);
+}
+
+.icone {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.vantagem h3 {
+    margin-bottom: 10px;
+}
+
+.vantagem p {
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-col h2 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    color: #aaa;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    display: block;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.redes a {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* CELULAR */
+/*CELULAR*/
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 50px 7% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+    }
+
+}
+.galeria {
+    padding: 80px 7%;
+    background: white;
+}
+
+.galeria .titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.galeria-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.foto-galeria {
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.foto-galeria:hover img {
+    transform: scale(1.08);
+}
+
+/* gale */
+
+.galeria {
+    padding: 60px 5%;
+}
+
+.galeria-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.foto-galeria {
+    height: 180px;
+}
+
+.vantagem,
+.card,
+.foto-galeria {
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    margin: 0;
+}
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .topo {
+        position: sticky;
+        top: 0;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .topo {
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .vantagens {
+        padding: 60px 5%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 30px;
+    }
+
+    .vantagens-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+.footer {
+    background: #111;
+    color: white;
+
+    padding: 60px 7% 20px;
+}
+.sobre {
+    padding: 80px 5%;
+    background: #ffffff;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.sobre .subtitulo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.sobre h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.btn-sobre {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+
+    background: #111;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .sobre {
+        padding: 60px 6%;
+    }
+
+    .sobre h2 {
+        font-size: 30px;
+    }
+
+    .sobre p {
+        font-size: 16px;
+    }
+
+}
+
+
+.destinos {
+    padding: 80px 5%;
+    background: #f5f5f5;
+}
+
+.destinos-titulo {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.destinos-titulo h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.destinos-titulo p {
+    font-size: 17px;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.destino-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.destino-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.luanda {
+    background-image: url("https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=900&q=80");
+}
+
+.namibe {
+    background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80");
+}
+
+.calai {
+    background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80");
+}
+
+.destino-info {
+    padding: 25px;
+}
+
+.destino-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.destino-info p {
+    line-height: 1.6;
+}
+
+.destino-info a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .destinos {
+        padding: 60px 6%;
+    }
+
+    .destinos-titulo h2 {
+        font-size: 30px;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
